@@ -1,0 +1,86 @@
+#logo-curtainbar{
+  /* border: 0.5px rgb(57, 57, 56) solid; */
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0px;
+  width: 100%;
+}
+
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 999;
+  left: 0;
+  top: 0;
+  background-color: rgb(255, 255, 255); /* Black fallback color */
+  background-color: rgba(255, 255, 255, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.2s ease; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a,.dropdown-btn {
+  padding-bottom: 8px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block; /* Change display to flex */
+  transition: 0.3s;
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: none;
+  font-family: 'Jost', sans-serif;
+  font-weight: 200;
+}
+
+.overlay .dropdown-btn{
+  width: 100%;
+}
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover {
+  color: #000000;
+}
+
+.dropdown-btn:hover{
+  color: #000000;
+}
+
+
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+.dropdown-container {
+  display: none;
+  background-color: #ffffff;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+
+
+@media (min-width: 1340px) {
+
+  #logo-curtainbar {
+    display: none;
+    justify-content: space-between;
+  }
+}
