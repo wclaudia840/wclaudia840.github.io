@@ -19,3 +19,17 @@
 .btn-chn {
   padding: 8px 28px;
 }
+
+@media (max-width: 425px){
+  .btn{
+    padding: 3px 10px;
+  }
+  .btn-chn {
+    padding: 3px 18px;
+  }
+  .container-btn{
+    display: flex;
+    justify-content:space-around;
+    /* border: 0.5px yellow solid; */
+  }
+}
